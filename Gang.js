@@ -76,6 +76,17 @@ switch (command) {
 case 'bot':
 client.sendMessage(from, 'Hola,felicidades, has logrado enviar un mensaje mediante un servidor externo😚', text, {quoted : sam})
 break
+
+case 'reglas':
+const audio = fs.readFileSync('Media/Reglas.mp3')
+client.sendMessage(from, audio, MessageType.audio, duration:-0, ptt:true, {quoted: { key: {
+fromMe: false,
+participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {})
+},
+message: {
+"documentMessage": { "title": "⏤͟͟͞͞ʍɪ͢ƨнɪɢɑи⃗ɢ↯🥀", 'jpegThumbnail': fs.readFileSync('Media/fake.jpg')}}
+}})
+break 
                 
 }
 
