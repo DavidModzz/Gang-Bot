@@ -1,6 +1,6 @@
 const { WAConnection, MessageType } = require('@adiwajshing/baileys');
 const fs = require('fs');
-const prefix = '.'
+const prefix = '~'
 
 async function iniciar () { 
         const client = new WAConnection()
@@ -9,7 +9,7 @@ async function iniciar () {
         client.on('qr', () => {
         })
 
-        fs.existsSync('./Samu330.json') && client.loadAuthInfo('./Samu330.json')
+        fs.existsSync('./Mishig.json') && client.loadAuthInfo('./Mishig.json')
 
         client.on('connecting', () => {
         console.log('Conectando')
@@ -19,7 +19,7 @@ async function iniciar () {
         console.log('Conectado exitosamente :D')
         })
         await client.connect({timeoutMs: 30*1000})
-        fs.writeFileSync('./Samu330.json', JSON.stringify(client.base64EncodedAuthInfo(), null, '\t'))
+        fs.writeFileSync('./Mishig.json', JSON.stringify(client.base64EncodedAuthInfo(), null, '\t'))
         
 
 client.on('chat-update', async (sam) => {
@@ -84,7 +84,7 @@ fromMe: false,
 participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {})
 },
 message: {
-"documentMessage": { "title": "⏤͟͟͞͞ʍɪ͢ƨнɪɢɑи⃗ɢ↯🥀", 'jpegThumbnail': fs.readFileSync('Media/fake.jpg')}}
+"documentMessage": { "title": "⏤͟͟͞͞ʍɪ͢ƨнɪɢɑи⃗ɢ↯🥀", 'jpegThumbnail': fs.readFileSync('Media/fake.jpeg')}}
 }})
 break 
                 
