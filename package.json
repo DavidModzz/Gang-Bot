@@ -1,0 +1,12 @@
+{
+  "name": "Mishigang",
+  "version": "0.0.0",
+  "description": "",
+  "main": "Gang.js",
+  "scripts": {
+  "start": "node Gang.js"
+  },
+  "dependencies": {
+    "@adiwajshing/baileys": "^3.4.1"
+  }
+}
